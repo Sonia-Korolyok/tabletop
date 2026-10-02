@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: tabletop-postgres
+    environment:
+      POSTGRES_DB: tabletop
+      POSTGRES_USER: tabletop
+      POSTGRES_PASSWORD: tabletop
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
