@@ -2,10 +2,12 @@
 
 A personal cookbook with an embedded AI agent: save recipes from anywhere (websites, YouTube, screenshots), organize them into folders, plan your weekly menu and build a grocery list.
 
-> Solo pet project. Status: stage 1 — backend skeleton + auth.
+> Solo pet project. Status: stage 2 in progress — recipes and library (schema migration V2 done).
 
 - Product spec: [docs/mvp-spec.md](docs/mvp-spec.md)
 - Competitor teardown (Honeydew): [docs/honeydew-teardown.md](docs/honeydew-teardown.md)
+- Database schema: [docs/database-schema.md](docs/database-schema.md)
+- Stage 2 flows: [docs/stage-2-flows.md](docs/stage-2-flows.md)
 
 ## Stack
 Java 21 · Spring Boot 3.5 · Spring Security (JWT, HS256) · PostgreSQL 16 · Flyway · JUnit 5 + Testcontainers · React + TypeScript PWA (planned) · Gemini API (planned)
@@ -38,9 +40,10 @@ curl -X POST localhost:8080/api/auth/register -H 'Content-Type: application/json
 
 ## Roadmap
 1. ✅ Skeleton, PostgreSQL, Flyway, auth
-2. Recipes CRUD + library (search, keyset pagination, folders)
-3. Import from websites (schema.org/Recipe) via async import jobs
-4. Import from YouTube and screenshots via Gemini
-5. Grocery list + meal plan
-6. Ingredient substitutions + cache
-7. Load test with 1000 recipes, polish, deploy
+2. 🚧 Recipes CRUD + library (search with typos, keyset pagination, folders, photos)
+3. App catalog of classic recipes
+4. Import from websites + online search
+5. Import from YouTube and screenshots via Gemini
+6. Grocery list + meal plan
+7. Ingredient substitutions + cache
+8. Load test with 1000 recipes, polish, deploy
