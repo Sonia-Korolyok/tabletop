@@ -8,6 +8,7 @@ A personal cookbook with an embedded AI agent: save recipes from anywhere (websi
 - Competitor teardown (Honeydew): [docs/honeydew-teardown.md](docs/honeydew-teardown.md)
 - Database schema: [docs/database-schema.md](docs/database-schema.md)
 - Stage 2 flows: [docs/stage-2-flows.md](docs/stage-2-flows.md)
+- Postman collection: [postman/TableTop.postman_collection.json](postman/TableTop.postman_collection.json)
 - Learning notes (RU): [docs/learning](docs/learning)
 
 ## Stack
