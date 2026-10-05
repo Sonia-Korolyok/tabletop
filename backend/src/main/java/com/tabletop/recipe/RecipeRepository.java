@@ -12,6 +12,9 @@ public interface RecipeRepository extends JpaRepository<Recipe, Long> {
     @Query("select r from Recipe r where r.id = :id and r.owner.id = :ownerId and r.deletedAt is null")
     Optional<Recipe> findOwned(Long id, Long ownerId);
 
+    /** Including soft-deleted ones: needed for restore. */
+    Optional<Recipe> findByIdAndOwnerId(Long id, Long ownerId);
+
     /** Same, but loads tags and cover in the same SQL query to avoid N+1 on the recipe screen. */
     @EntityGraph(attributePaths = {"tags", "coverImage"})
     @Query("select r from Recipe r where r.id = :id and r.owner.id = :ownerId and r.deletedAt is null")

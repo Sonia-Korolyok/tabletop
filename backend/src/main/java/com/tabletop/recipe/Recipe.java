@@ -6,6 +6,7 @@ import com.tabletop.tag.Tag;
 import com.tabletop.user.User;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.OptimisticLock;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.OffsetDateTime;
@@ -59,6 +60,8 @@ public class Recipe {
     @Column(columnDefinition = "text")
     private String notes;
 
+    /** Liking a recipe on the phone must not block editing it on the laptop: excluded from @Version. */
+    @OptimisticLock(excluded = true)
     @Column(name = "is_favorite", nullable = false)
     private boolean favorite;
 

@@ -26,13 +26,19 @@ Environment variables (see `.env.example`): `DB_URL`, `DB_USER`, `DB_PASSWORD`, 
 cd backend && mvn test          # integration tests need Docker running (Testcontainers)
 ```
 
-## API (stage 1)
+## API
 | Method | Path | Auth | Description |
 |---|---|---|---|
 | POST | `/api/auth/register` | — | `{email, password, displayName}` → JWT |
 | POST | `/api/auth/login` | — | `{email, password}` → JWT |
 | GET | `/api/me` | Bearer | current user |
 | GET | `/actuator/health` | — | health check |
+| POST | `/api/recipes` | Bearer | create recipe (ingredients as plain lines, parsed on the server) |
+| GET | `/api/recipes/{id}?servings=` | Bearer | recipe, optionally scaled |
+| PUT | `/api/recipes/{id}` | Bearer | replace recipe, requires `version` |
+| DELETE | `/api/recipes/{id}` | Bearer | soft delete |
+| POST | `/api/recipes/{id}/restore` | Bearer | restore from trash |
+| PATCH | `/api/recipes/{id}/favorite` | Bearer | `{favorite}` |
 
 ```bash
 curl -X POST localhost:8080/api/auth/register -H 'Content-Type: application/json' \
