@@ -176,7 +176,7 @@ erDiagram
 | Этап | Таблицы |
 |---|---|
 | 1 (готово) | `users` |
-| 2 | `recipes`, `recipe_ingredients`, `recipe_steps`, `tags`, `recipe_tags`, `folders`, `folder_recipes`, `images` |
+| 2 (V2, V3) | `recipes`, `recipe_ingredients`, `recipe_steps`, `tags`, `recipe_tags`, `folders`, `folder_recipes`, `images` |
 | Аккаунт | `refresh_tokens`, `users.avatar_image_id` |
 | 3 | данные каталога в тех же `recipes` и `tags` с `user_id = NULL` |
 | 4–5 | `import_jobs`, `recipe_drafts` |

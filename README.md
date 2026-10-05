@@ -2,12 +2,13 @@
 
 A personal cookbook with an embedded AI agent: save recipes from anywhere (websites, YouTube, screenshots), organize them into folders, plan your weekly menu and build a grocery list.
 
-> Solo pet project. Status: stage 2 in progress — recipes and library (schema migration V2 done).
+> Solo pet project. Status: stage 2 in progress — recipes and library (migrations V2–V3 and JPA entities done).
 
 - Product spec: [docs/mvp-spec.md](docs/mvp-spec.md)
 - Competitor teardown (Honeydew): [docs/honeydew-teardown.md](docs/honeydew-teardown.md)
 - Database schema: [docs/database-schema.md](docs/database-schema.md)
 - Stage 2 flows: [docs/stage-2-flows.md](docs/stage-2-flows.md)
+- Learning notes (RU): [docs/learning](docs/learning)
 
 ## Stack
 Java 21 · Spring Boot 3.5 · Spring Security (JWT, HS256) · PostgreSQL 16 · Flyway · JUnit 5 + Testcontainers · React + TypeScript PWA (planned) · Gemini API (planned)
